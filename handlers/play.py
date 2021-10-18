@@ -35,7 +35,7 @@ async def oynat(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="🌀 ᴀꜱɪꜱᴛᴀɴ",
-                        url=f"https://t.me/musicoynatici"),
+                        url=f"https://t.me/musicbotasistann"),
                     InlineKeyboardButton(
                         text="💬 ɢʀᴏᴜᴘ​",
                         url=f"https://t.me/SemtBizimEvKiraa")

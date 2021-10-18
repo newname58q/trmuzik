@@ -83,11 +83,11 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="💬 Group",
+                        text="💬 ɢʀᴏᴜᴘ",
                         url=f"https://t.me/SemtBizimEvKiraa"),
                     InlineKeyboardButton(
-                        text="🌀 Asistan",
-                        url=f"https://t.me/musicoynatici")
+                        text="🌀 ᴀꜱɪꜱᴛᴀɴ",
+                        url=f"https://t.me/musicbotasistann")
                    
                 ]
             ]
@@ -97,11 +97,11 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="💬 Group",
+                        text="💬 ɢʀᴏᴜᴘ",
                         url=f"https://t.me/SemtBizimEvKiraa"),
                     InlineKeyboardButton(
-                        text="🌀 Asistan",
-                        url=f"https://t.me/musicoynatici")
+                        text="🌀 ᴀꜱɪꜱᴛᴀɴ",
+                        url=f"https://t.me/musicbotasistann")
                    
                 ]
             ]
