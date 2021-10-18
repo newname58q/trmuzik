@@ -11,7 +11,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAx0CTv65QgABBfJlYF6VCrGMm6OJ23AxHmD6qUSWESsAAhoQAAKm8XEeD5nrjz5IJFYeBA")
     await message.reply_text(
-        f"""ᴍᴇʀʜᴀʙᴀ 👋! **ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴜᴘʟᴀʀɪɴɪɴ ꜱᴇꜱʟɪ ꜱᴏʜʙᴇᴛʟᴇʀɪɴᴅᴇ ᴍᴜᴢɪᴋ ᴄᴀʟᴀʙɪʟɪʏᴏʀᴜᴍ. ꜱɪᴢɪ ꜱᴀꜱɪʀᴛᴀᴄᴀᴋ ᴘᴇᴋ ᴄᴏᴋ ʜᴀʀɪᴋᴀ ᴏᴢᴇʟʟɪɢɪᴍ ᴠᴀʀ!** 🥳 \n\n🔴 **ᴛᴇʟᴇɢʀᴀᴍᴅᴀ ʙᴇɴɪ ɴᴀꜱɪʟ ᴋᴜʟʟᴀɴᴀʙɪʟᴇᴄᴇɢɪɴɪᴢɪ ᴏɢʀᴇɴᴍᴇᴋ ɪᴄɪɴ ʟᴜᴛꜰᴇɴ >> /help ʙᴜᴛᴏɴᴜɴᴀ ʙᴀꜱɪɴɪᴢ.** \n\n🔴 **ɢʀᴜʙᴜɴᴜᴢᴜɴ ꜱᴇꜱʟɪ ꜱᴏʜʙᴇᴛɪɴᴅᴇ, ᴍᴜᴢɪᴋ ᴄᴀʟᴀʙɪʟᴍᴇᴍ ɪᴄɪɴ ᴀꜱɪꜱᴛᴀɴɪɴ ɢʀᴜʙᴜɴᴜᴢᴅᴀ ᴏʟᴍᴀꜱɪ ɢᴇʀᴇᴋɪʀ.** \n\n🔵 ʙᴜ ᴄᴀʟɪꜱᴍᴀ [Jack Medya](https://t.me/SemtBizimEvKira) ᴛᴀʀᴀꜰɪɴᴅᴀɴ ᴋᴇʏꜰᴇ ᴅᴇɢᴇʀ ᴅᴜᴢᴇɴʟᴇɴᴍɪꜱᴛɪʀ.!
+        f"""ᴍᴇʀʜᴀʙᴀ 👋! **ᴛᴇʟᴇɢʀᴀᴍ ɢʀᴜᴘʟᴀʀɪɴɪɴ ꜱᴇꜱʟɪ ꜱᴏʜʙᴇᴛʟᴇʀɪɴᴅᴇ ᴍᴜᴢɪᴋ ᴄᴀʟᴀʙɪʟɪʏᴏʀᴜᴍ. ꜱɪᴢɪ ꜱᴀꜱɪʀᴛᴀᴄᴀᴋ ᴘᴇᴋ ᴄᴏᴋ ʜᴀʀɪᴋᴀ ᴏᴢᴇʟʟɪɢɪᴍ ᴠᴀʀ!** 🥳 \n\n🔴 **ᴛᴇʟᴇɢʀᴀᴍᴅᴀ ʙᴇɴɪ ɴᴀꜱɪʟ ᴋᴜʟʟᴀɴᴀʙɪʟᴇᴄᴇɢɪɴɪᴢɪ ᴏɢʀᴇɴᴍᴇᴋ ɪᴄɪɴ ʟᴜᴛꜰᴇɴ >> /help ʙᴜᴛᴏɴᴜɴᴀ ʙᴀꜱɪɴɪᴢ.** \n\n🔴 **ɢʀᴜʙᴜɴᴜᴢᴜɴ ꜱᴇꜱʟɪ ꜱᴏʜʙᴇᴛɪɴᴅᴇ, ᴍᴜᴢɪᴋ ᴄᴀʟᴀʙɪʟᴍᴇᴍ ɪᴄɪɴ ᴀꜱɪꜱᴛᴀɴɪɴ ɢʀᴜʙᴜɴᴜᴢᴅᴀ ᴏʟᴍᴀꜱɪ ɢᴇʀᴇᴋɪʀ.** \n\n🔵 ʙᴜ ᴄᴀʟɪꜱᴍᴀ [Jack Medya](https://t.me/SemtBizimEvKiraa) ᴛᴀʀᴀꜰɪɴᴅᴀɴ ᴋᴇʏꜰᴇ ᴅᴇɢᴇʀ ᴅᴜᴢᴇɴʟᴇɴᴍɪꜱᴛɪʀ.!
       """,
         reply_markup=InlineKeyboardMarkup(
             [ 
