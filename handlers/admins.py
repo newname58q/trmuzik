@@ -3,7 +3,7 @@ from asyncio.queues import QueueEmpty
 from pyrogram import Client
 from pyrogram.types import Message
 
-import cache.admins
+from cache.admins import admins
 
 import callsmusic
 
@@ -86,4 +86,36 @@ async def admincache(_, message: Message):
         message.chat.id,
         [member.user for member in await message.chat.get_members(filter="administrators")]
     )
-    await message.reply_text("👮‍♀️ ʏᴏɴᴇᴛɪᴄɪ ᴏɴʙᴇʟʟᴇɢɪ ʏᴇɴɪʟᴇɴᴅɪ!") 
+    await message.reply_text("👮‍♀️ ʏᴏɴᴇᴛɪᴄɪ ᴏɴʙᴇʟʟᴇɢɪ ʏᴇɴɪʟᴇɴᴅɪ!")
+    
+# Yetki Vermek için (ver) Yetki almak için (al) komutlarını ekledim. Helpers dosyasının modüllerini kontrol ediniz. 
+@Client.on_message(filters.command("ver"))
+@authorized_users_only
+async def authenticate(client, message):
+    global admins
+    if not message.reply_to_message:
+        await message.reply("« ᴋᴜʟʟᴀɴɪᴄɪʏᴀ ʏᴇᴛᴋɪ ᴠᴇʀᴍᴇᴋ ɪᴄɪɴ ʏᴀɴɪᴛʟᴀʏɪɴɪᴢ »❗")
+        return
+    if message.reply_to_message.from_user.id not in admins[message.chat.id]:
+        new_admins = admins[message.chat.id]
+        new_admins.append(message.reply_to_message.from_user.id)
+        admins[message.chat.id] = new_admins
+        await message.reply("✔« ᴋᴜʟʟᴀɴɪᴄɪ ʏᴇᴛᴋɪʟɪ. » ✔")
+    else:
+        await message.reply("✔« ᴋᴜʟʟᴀɴɪᴄɪ ᴢᴀᴛᴇɴ ʏᴇᴛᴋɪʟɪ! »")
+
+
+@Client.on_message(filters.command("al"))
+@authorized_users_only
+async def deautenticate(client, message):
+    global admins
+    if not message.reply_to_message:
+        await message.reply("✘« ᴋᴜʟʟᴀɴɪᴄɪʏɪ ʏᴇᴛᴋɪꜱɪᴢʟᴇꜱᴛɪʀᴍᴇᴋ ɪᴄɪɴ ᴍᴇꜱᴀᴊ ᴀᴛɪɴɪᴢ❗ »")
+        return
+    if message.reply_to_message.from_user.id in admins[message.chat.id]:
+        new_admins = admins[message.chat.id]
+        new_admins.remove(message.reply_to_message.from_user.id)
+        admins[message.chat.id] = new_admins
+        await message.reply("✘ ᴋᴜʟʟᴀɴɪᴄɪ ʏᴇᴛᴋɪꜱɪᴢ ✘")
+    else:
+        await message.reply("✔ ᴋᴜʟʟᴀɴɪᴄɪɴɪɴ ʏᴇᴛᴋɪꜱɪ ᴀʟɪɴᴅɪ❗")

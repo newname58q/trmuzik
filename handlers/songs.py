@@ -55,7 +55,7 @@ async def a(client, message: Message):
         )
         print(str(e))
         return
-    await m.edit(f"**{Bn} :-** 📥 ɪɴᴅɪʀɪʏᴏʀ...\n**Query :-** {query}")
+    await m.edit(f"**{Bn} :-** 📥 ɪɴᴅɪʀɪʏᴏʀ...\n**ꜱᴀʀᴋɪ :-** {query}")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
