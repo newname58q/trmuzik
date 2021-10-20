@@ -1,15 +1,26 @@
 from asyncio.queues import QueueEmpty
-
-from pyrogram import Client
+ 
+from pyrogram import Client, filters 
 from pyrogram.types import Message
-
-from cache.admins import admins
+from helpers.channelmusic import get_chat_id
+from cache.admins import admins 
 
 import callsmusic
 
 from config import BOT_NAME as BN
 from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
+
+
+@Client.on_message(filters.command("reload"))
+async def update_admin(client, message):
+    global admins
+    new_admins = []
+    new_ads = await client.get_chat_members(message.chat.id, filter="administrators")
+    for u in new_ads:
+        new_admins.append(u.user.id)
+    admins[message.chat.id] = new_admins
+    await message.reply_text("✔ ʙᴏᴛ ** ᴅᴏɢʀᴜ ʏᴜᴋʟᴇɴᴅɪ! **\n✔ **𝚈ᴏɴᴇᴛɪᴄɪ ʟɪꜱᴛᴇꜱɪ** 👨‍💻 **ɢᴜɴᴄᴇʟʟᴇɴᴅɪ!**")
 
 
 @Client.on_message(command("durdur") & other_filters)
